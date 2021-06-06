@@ -1,0 +1,35 @@
+Relations created from the ER-diagram (capital letters for primary keys):
+I have done this task and created the following relations:
+
+vaccine(NAME, req_doses, timeframe, rna_type, ird)
+patient(IRD, DoB, street, suburb, city, lname, fname, sex, ethnicity)
+doctor(IRD, licence, DoB, street, suburb, city, lname, fname)
+covid(DIAGNOSED_DATE, recovered_date, fatal, IRD)
+dose(NAME, DATE, IRD)
+
+
+next task:
+This is where I am stuck and looking for your help:
+
+Test data sets Create two data sets. One will be a small dataset containing realistic data, while the other one will contain more data, but can be filled with somewhat-realistic dummy values. Create your data sets in a way that allows you to easily re-load the data as needed. Small dataset: For each relation, generate a file with about 5-10 meaningful records. Your documentation should include a screenshot showing table contents (generated with select *). Large dataset: Either write a program (in a language of your choice) that generates large files with random data for your table, or use a data generator tool. The data needs to be sized and formatted similar to ”regular” records (e.g. long strings). The data should consist of at least two related tables and at least several hundred thousand tuples in each table. Take care that the data conforms to the previously defined functional dependencies. Documentation is to contain a description of how you created your data, as well as a screenshot that shows the successful loading of the data.  
+
+
+first attempts on the above task:
+I am thinking to use SQL to create the large datasets along the lines of the following code I pieced together:
+
+create table project_test_data as
+select rownum as id,
+dbms_random.string('A', 6) as name,
+dbms_random.string('A', 8)||'@gmail.com' as email,
+floor(DBMS_random.value(10,100)) *1000 as salary,
+floor(DBMS_random.value (100000,999999)) as SSN,
+floor(DBMS_random.value(10,100)) *10 as manager_id,
+'M' as gender
+from dual
+connect by level <=1000000
+
+select * from project_test_data
+
+update project_test_data set gender='F' where mod(id,2)=0
+
+select * from project_test_data

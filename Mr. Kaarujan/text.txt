@@ -1,0 +1,24 @@
+t = "good morning" //length = n, firstIndex =0
+p = "od mo" // length = m, lastIndex = n-1 if we begin from 0
+
+[g]
+[o]
+[o]
+[d]
+[ ]
+[m]
+[o]
+[r]
+[n]
+[i]
+[n]
+[g]
+
+String = "Apple Are awesome"
+aaaaabbbb
+
+
+String x = "Okay" : 117*31^3 + 153*31^2 + 141*31^1 + 171*1 = 
+String y = "okay" : 157*31^3 + 153*31^2 + 141*31^1 + 171*1 =
+
+

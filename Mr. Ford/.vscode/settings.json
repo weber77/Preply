@@ -1,0 +1,27 @@
+{
+    "files.associations": {
+        "vector": "cpp",
+        "iosfwd": "cpp",
+        "iterator": "cpp",
+        "fstream": "cpp",
+        "iostream": "cpp",
+        "array": "cpp",
+        "*.tcc": "cpp",
+        "bitset": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "functional": "cpp",
+        "iomanip": "cpp",
+        "istream": "cpp",
+        "limits": "cpp",
+        "ostream": "cpp",
+        "ranges": "cpp",
+        "ratio": "cpp",
+        "span": "cpp",
+        "sstream": "cpp",
+        "stop_token": "cpp",
+        "streambuf": "cpp",
+        "regex": "cpp",
+        "tuple": "cpp"
+    }
+}
